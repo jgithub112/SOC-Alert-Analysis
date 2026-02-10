@@ -5,14 +5,32 @@ An alert that correctly identifies malicious or unauthorized activity.
 
 False Positive (FP)
 An alert triggered by legitimate, expected, or authorized behavior.
-
-True Positive Process Patterns
+===================================
+True Positive(TP) Process Patterns
+===================================
 True positive process alerts commonly include abnormal context or behavior, such as:
 
 - Use of Living-off-the-Land Binaries (LOLBins)  
   (`powershell.exe`, `cmd.exe`, `net.exe`, `wmic.exe`)
 
-- Execution from **user-writable directories**:
+- Execution from user-writable directories
   - `Downloads`
   - `Temp`
   - `AppData`
+
+- Suspicious parent–child relationships
+  - Office applications spawning scripts
+  - PowerShell launching system utilities
+
+- Access to sensitive resources (e.g., financial or HR file shares)
+
+- Follow-on activity:
+  - File staging or compression
+  - Network share access
+  - Credential usage
+
+- Activity occurring outside normal business hours
+
+Example pattern
+powershell.exe -> net.exe -> sensitive file share access -> archive creation
+
