@@ -5,6 +5,7 @@ An alert that correctly identifies malicious or unauthorized activity.
 
 False Positive (FP)
 An alert triggered by legitimate, expected, or authorized behavior.
+
 ===================================
 True Positive(TP) Process Patterns
 ===================================
@@ -33,4 +34,35 @@ True positive process alerts commonly include abnormal context or behavior, such
 
 Example pattern
 powershell.exe -> net.exe -> sensitive file share access -> archive creation
+
+=====================================
+False Positive (FP) Process Patterns
+=====================================
+False positives typically involve legitimate Windows system activity, including:
+
+- Known Windows binaries:
+  - `TrustedInstaller.exe`
+  - `WUDFHost.exe`
+  - `rdpclip.exe`
+  - `svchost.exe`
+
+- Execution from default system paths:
+  - `C:\Windows\System32`
+  - `C:\Windows\Servicing`
+
+- Expected parent processes:
+  - `services.exe`
+  - `svchost.exe`
+
+- Standard command-line arguments
+
+- Activity consistent with:
+  - Windows updates
+  - Driver initialization
+  - Remote Desktop sessions
+  - Routine system maintenance
+
+Example pattern:
+services.exe -> WUDFHost.exe (standard UMDF parameters)
+
 
