@@ -1,0 +1,7 @@
+Definitions
+
+True Positive (TP) 
+An alert that correctly identifies malicious or unauthorized activity.
+
+False Positive (FP)
+An alert triggered by legitimate, expected, or authorized behavior.
