@@ -7,7 +7,6 @@ False Positive (FP)
 An alert triggered by legitimate, expected, or authorized behavior.
 
 True Positive Process Patterns
-
 True positive process alerts commonly include abnormal context or behavior, such as:
 
 - Use of Living-off-the-Land Binaries (LOLBins)  
