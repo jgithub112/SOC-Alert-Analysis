@@ -1,0 +1,31 @@
+================================
+True Positive Phishing Patterns
+================================
+True phishing alerts usually demonstrate clear social engineering intent, such as:
+
+- Urgent or threatening language
+- Requests for credentials, MFA approval, or payment
+- Domain impersonation or lookalike domains
+- Embedded links leading to:
+  - Fake login portals
+  - Malicious downloads
+- Attachments with macros or executable content
+- Inconsistent branding or formatting
+
+Example pattern:
+Urgent email -> spoofed sender -> credential harvesting link
+
+=================================
+False Positive Phishing Patterns
+=================================
+False positives in email security commonly include:
+
+- Marketing or promotional messages
+- Newsletters or event announcements
+- Humor-based or exaggerated offers
+- No embedded links or malicious attachments
+- No request for credentials or sensitive information
+- Known or reputable senders
+
+Example pattern:
+Promotional content → exaggerated offer → no malicious indicators
